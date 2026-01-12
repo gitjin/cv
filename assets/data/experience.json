@@ -1,0 +1,58 @@
+[
+{
+    "company": "Robert Bosch GmbH, Pipeline@Power Solution",
+    "position": "PCF Data engineer / Semantic Modelling",
+    "duration": "Mar, 2025 — Present",
+    "summary_html": "<ul class=\"resume-item-list\"><li>End-to-end ownership of pipelines (arch → code → deploy → on-call) as single point of accountability.</li><li>Entered the sustainability domain with focus on Product Carbon Footprint (PCF).</li><li>Connected and aligned with Catena-X PCF standards and datasets.</li><li>Collaborated with cross-functional teams to deliver a production-ready data product.</li></ul>",
+    "summary": "End-to-end ownership of pipelines (arch → code → deploy → on-call) as single point of accountability.\nEntered the sustainability domain with focus on Product Carbon Footprint (PCF).\nConnected and aligned with Catena-X PCF standards and datasets.\nCollaborated with cross-functional teams to deliver a production-ready data product."
+    },
+  {
+    "company": "Robert Bosch GmbH, Pipeline@Power Solution",
+    "position": "Semantic Modelling / System Architect",
+    "duration": "Apr, 2024 — Mar, 2025",
+    "summary_html": "<ul class=\"resume-item-list\"><li>Transitioned production pipeline ownership to focus on new domains and architecture</li><li>Provided strategic consulting on scalability and roadmap</li><li>Planned and led a Databricks data engineering workshop; improved code stability and reduced cloud costs</li><li>Tech lead for an AI-driven news stream pipeline (summarization + chatbot) deployed on Databricks and Azure</li></ul>",
+    "summary": "Transitioned production pipeline ownership to focus on new domains and architecture.\nProvided strategic consulting on scalability and roadmap.\nPlanned and led a Databricks data engineering workshop; improved code stability and reduced cloud costs.\nTech lead for an AI-driven news stream pipeline (summarization + chatbot) deployed on Databricks and Azure."
+  },
+  {
+    "company": "Robert Bosch GmbH, Digital Business Xcellerator",
+    "position": "Tech Lead Data Engineering / PO",
+    "duration": "May, 2022 — Apr, 2024",
+    "summary": "As tech lead, successfully launched more than 100 customer production data pipelines, driving business growth and enhancing data-driven decision-making. Led architecture of pipelines and data structures, continuously improving quality and cost-effectiveness. Mentored and coached a team of 7 data engineers on technical skills and best practices. Prioritized sprint tasks to ensure delivery of objectives. As PO, led an international team to design and implement pipeline solutions in Azure, bridging business requirements and technical solutions, and ensuring adherence to internal quality standards and legal requirements. Technolgy used - Databricks/Delta Lake, Apache Spark, Azure, DevOps, Python, Golang",
+    "summary_html": "As tech lead, Successfully launched more than 100 (customer) production data pipeline, driving business growth and enhancing data-driven decision-making processes <ul class=\"resume-item-list\"> <li>Lead architectur of pipeline and data structures, continuously enhancing pipeline quality and cost-effectiveness</li><li>mentored and coached a team of 7 data engineer, providing guidance on technical skills, best practices</li><li>Prioritizing tasks within sprints to ensure delivery of project objectives</li></ul> As PO, Leading an international team to design and implement pipeline solution in Cloud Environment (azure) <ul class=\"resume-item-list\"> <li>Effectively bridge the gap between business requirements and technical solutions</li><li>Successfully lead the team through internal quality process, ensuring adherence to quality standards as well as legal requirements</li></ul> Technolgy used - Databricks/Delta Lake, Apache Spark, Azure, DevOps, Python, Golang"
+  },
+  {
+    "company": "Robert Bosch GmbH, Digital Business Xcellerator",
+    "position": "Data Engineer",
+    "duration": "Nov, 2021 — May, 2022",
+    "summary": "Designed and implemented a real-time monitoring architecture, improving reaction time for system engineering on fuel cell malfunctions. Built robust algorithms to identify real-time failures and deliver alerts to experts. Embedded a virtual replica (hybrid model) of a pressure sensor in the fuel cell air compression system. Provided technical support for self-calibration of the Hydrogen Gas Injector. Technolgy used - Python, Docker/Docker Compose, Shell, Hadoop, Azure",
+    "summary_html": "<ul class=\"resume-item-list\"> <li> design and implement a real time monitoring architecture, improving the reaction time of the systems engineering on malfunctions in the fuel cell system </li> <li>Design and implement robust algorithms to identify real time failures and send alerts to experts in the business unit </li> <li> driving the embedding of a virtual replica (hybrid model) of a pressure sensor in the fuel cell air compression system </li> <li>technical support for the self-calibration of the Hydrogen Gas Injector </li> </ul> Technolgy used - Python, Docker/Docker Compose, Shell, Hadoop, Azure"
+  },
+  {
+    "company": "Robert Bosch GmbH, Big Data, Modelling and AI",
+    "position": "Data Engineer/Analyst",
+    "duration": "Jul, 2019 — Nov, 2021",
+    "summary": "Defined and created ad-hoc pipelines to accelerate UC development. Designed the architecture for Tableau reporting tools. Trained new employees in cloud programming and visualization with Tableau. Led technical reviews and process optimization for data-enhanced activities. Consulted and initiated UC development across cross-functional departments. Technolgy used - Hadoop/Apache Spark, Oozie, Impala/SQL, Tableau, Python",
+    "summary_html": "<ul class=\"resume-item-list\"> <li> defination and creation of adhocpipeline to accerate the UC development </li> <li>defination and creation of the architecture for tableau reporting tools </li> <li>training of new employees for cloud programming and visulaisation with Tableau</li> <li>in charge of technical review and process optimization for data enhanced activities</li> <li>consulting and initialization the UC development in cross functional department</li></ul> Technolgy used - Hadoop/Apache Spark, Oozie, Impala/SQL, Tableau, Python"
+  },
+  {
+    "company": "Robert Bosch GmbH, Big Data, Modelling and AI",
+    "position": "Function Developer Embedded AI",
+    "duration": "Jul, 2019 — Nov, 2021",
+    "summary": "Technical lead for data-enhanced embedding activities, responsible for AI and data-enhanced modeling, validation, prototyping, and integration. Technolgy used - Python, C",
+    "summary_html": "technical Lead for data-enhanced embedding activities <div> in charge of AI and Data enhanced modeling, validation, prototyping and integration </div> Technolgy used - Python, C"
+  },
+  {
+    "company": "Robert Bosch GmbH, Function Development",
+    "position": "Predictive Function Developer",
+    "duration": "Sep, 2016 — Jul, 2019",
+    "summary": "Responsible for modeling, simulation, prototyping, and test/validation for predictive DPF regeneration with navigation and self-route learning. Functions successfully integrated in three customer projects. Supported and troubleshot Customer BRS 48v Project. Technolgy used - Matlab/Simulink, C, TPT, INCA/MDA, Ascet",
+    "summary_html": "in charge of modelling, simulation, prototyping and test/validation for <ul class=\"resume-item-list\"> <li> Predicitive DPF Regeneration with Navigation </li> <li> Predicitive DPF Regeneration with self-route learning </li> </ul> functions are successfully integrated in 3 Customer Project <div> supporting and troubleshooting in Customer BRS 48v Project </div> <div>Technolgy used - Matlab/Simulink, C , TPT, INCA/MDA, Ascet </div>"
+  },
+  {
+    "company": "Robert Bosch GmbH, Applikation",
+    "position": "Internships",
+    "duration": "Dec, 2015 — Jun, 2016 | Jul, 2015 — Nov, 2015",
+    "summary": "Developed and documented a Simulink code generator for simulation and numeric optimization. Built a simple interface between Matlab Simulink models and test data. Modeled and parameterized a lambda sonde model. Developed a new optimization method for lambda sonde dynamics and diagnostic robustness. Compared different optimization methods.",
+    "summary_html": "<ul class=\"resume-item-list\"> <li> Develop and document a simulink code generator for simulation and numeric optomization </li> <li> Develop a simply interface between matlab simulink model and test data </li> <li>Modelling and parameterization a lambda Sonde model </li> <li>Develop a new optimization method for lambdasonde Dynamic and Diagnoserobustheit</li> <li>Comparsion of different optimization method</li>"
+  }
+]

@@ -1,0 +1,64 @@
+:root {
+  --bg: #fff;
+  --fg: #111;
+  --muted: #555;
+  --brand: #0b5fff;
+  --card: #f6f8fa;
+  --border: #e1e4e8;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; background: var(--bg); color: var(--fg); }
+
+.cv-root { max-width: 900px; margin: 0 auto; padding: 24px; }
+.cv-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 24px; }
+.cv-title { font-size: 28px; line-height: 1.2; margin: 0 0 4px; }
+.cv-subtitle { margin: 0; color: var(--muted); }
+.cv-actions { display: flex; gap: 10px; }
+.btn { background: var(--brand); color: #fff; border: none; border-radius: 6px; padding: 8px 12px; cursor: pointer; font-weight: 600; }
+.btn:hover { filter: brightness(0.92); }
+
+.cv-profile { display: flex; align-items: center; gap: 16px; margin: 8px 0 20px; }
+.cv-avatar { width: 128px; height: 128px; border-radius: 50%; object-fit: cover; border: 2px solid var(--border); background: #fff; }
+.cv-ident { display: grid; }
+.cv-name { margin: 0; font-size: 24px; }
+.cv-titleline { margin: 4px 0 0; color: var(--muted); }
+.cv-contact { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; }
+.cv-contact a { color: var(--brand); text-decoration: none; }
+.cv-contact a:hover { text-decoration: underline; }
+.cv-location { color: var(--muted); }
+
+.xp-list { display: grid; gap: 14px; }
+.xp-item { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px; }
+.xp-header { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 6px; }
+.xp-role { margin: 0; font-size: 18px; }
+.xp-company { color: var(--muted); font-weight: 600; }
+.xp-duration { color: var(--muted); white-space: nowrap; }
+.xp-summary { color: #222; }
+.xp-summary ul { margin: 6px 0 0 20px; }
+.xp-summary li { margin: 4px 0; }
+/* Support legacy summary_html lists */
+.resume-item-list { margin: 6px 0 0 20px; padding: 0; }
+.resume-item-list li { margin: 4px 0; }
+
+.edu-list, .skills-list { margin-top: 24px; }
+.edu-item { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 12px; margin-bottom: 10px; }
+.edu-header { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.edu-degree { font-weight: 600; }
+.edu-year { color: var(--muted); }
+.edu-note { color: var(--muted); font-size: 0.95em; }
+.skills-list ul { list-style: none; padding: 0; margin: 8px 0 0; display: flex; flex-wrap: wrap; gap: 8px 14px; }
+.skills-list li { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; }
+
+.status { color: var(--muted); }
+.status.error { color: #b00020; }
+
+@media print {
+  body { background: #fff; color: #000; }
+  .no-print { display: none !important; }
+  .cv-root { padding: 0; }
+  .xp-item { border: none; background: #fff; padding: 8px 0; page-break-inside: avoid; }
+  .cv-avatar { display: none; }
+  .edu-item, .skills-list li { border: none; background: #fff; }
+}
