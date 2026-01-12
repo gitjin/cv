@@ -1,0 +1,10 @@
+{
+  "name": "Chen Jin",
+  "title": "Tech Lead Data Engineer | Function Developer | Mechanical Engineer",
+  "email": "chen.jin.stuttgart@gmail.com",
+  "location": "Stuttgart, Deutschland",
+  "avatar": "./images/jc.jpg",
+  "links": [
+    { "label": "GitHub", "url": "https://github.com/gitjin" }
+  ]
+}
