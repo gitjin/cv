@@ -62,7 +62,8 @@
         const [skills, setSkills] = useState([]);
         const [error, setError] = useState(null);
         const [loading, setLoading] = useState(true);
-        const [profile, setProfile] = useState(null);
+  const [profile, setProfile] = useState(null);
+  const [showMore, setShowMore] = useState(false);
 
         useEffect(() => {
           (async () => {
@@ -98,59 +99,13 @@
         }, []);
 
         const onPrint = () => window.print();
-        const onDownloadJSON = () => {
-          try {
-            const blob = new Blob([JSON.stringify(items, null, 2)], { type: 'application/json' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'experience.json';
-            document.body.appendChild(a);
-            a.click();
-            a.remove();
-            URL.revokeObjectURL(url);
-          } catch (e) {
-            console.error('Download failed', e);
-          }
-        };
-        const extractTech = (summary = '') => {
-          if (typeof summary !== 'string') return [];
-          // Handle typos like "Technolgy used" and variants; parse tech list from plain text
-          const m = summary.match(/Technol?g(?:y|ie)\s+used\s*-\s*([^\.\n<]+)/i);
-          if (!m) return [];
-          return m[1].split(/[\/,]/).map(s => s.trim()).filter(Boolean);
-        };
-        const onDownloadGraph = () => {
-          // Build a very simple nodes/edges graph for later semantic modeling
-          const nodes = new Map();
-          const edges = [];
-          const addNode = (id, label, type) => { if (!nodes.has(id)) nodes.set(id, { id, label, type }); };
-          const addEdge = (source, target, relation) => edges.push({ source, target, relation });
-          items.forEach((it, i) => {
-            const companyId = `company:${(it.company||'').toLowerCase()}`;
-            const roleId = `role:${(it.position||'').toLowerCase()}@${i}`;
-            addNode(companyId, it.company || 'Unknown Company', 'Company');
-            addNode(roleId, it.position || 'Role', 'Role');
-            addEdge(roleId, companyId, 'AT_COMPANY');
-            extractTech(it.summary).forEach(t => {
-              const techId = `tech:${t.toLowerCase()}`;
-              addNode(techId, t, 'Technology');
-              addEdge(roleId, techId, 'USED_TECH');
-            });
-          });
-          const graph = { nodes: Array.from(nodes.values()), edges };
-          const blob = new Blob([JSON.stringify(graph, null, 2)], { type: 'application/json' });
-          const url = URL.createObjectURL(blob);
-          const a = document.createElement('a');
-          a.href = url;
-          a.download = 'experience-graph.json';
-          document.body.appendChild(a);
-          a.click();
-          a.remove();
-          URL.revokeObjectURL(url);
-        };
 
-        return h('main', { className: 'cv-root' },
+  const FIRST_VISIBLE = 3;
+  const visibleItems = useMemo(() => items.slice(0, FIRST_VISIBLE), [items]);
+  const hiddenItems = useMemo(() => items.slice(FIRST_VISIBLE), [items]);
+  const hiddenCount = hiddenItems.length;
+
+  return h('main', { className: 'cv-root' },
           profile && h('section', { className: 'cv-profile' },
             h('img', {
               className: 'cv-avatar',
@@ -176,15 +131,23 @@
               h('p', { className: 'cv-subtitle' }, 'Professional Experience')
             ),
             h('div', { className: 'cv-actions no-print' },
-              h('button', { className: 'btn', onClick: onPrint }, 'Print / Save PDF'),
-              h('button', { className: 'btn', onClick: onDownloadJSON }, 'Download JSON'),
-              h('button', { className: 'btn', onClick: onDownloadGraph }, 'Download Graph')
+              h('button', { className: 'btn', onClick: onPrint }, 'Print / Save PDF')
             )
           ),
           loading && h('p', { className: 'status' }, 'Loading experience…'),
           error && h('p', { className: 'status error' }, String(error)),
           !loading && !error && h('section', { className: 'xp-list' },
-            items.map((item, idx) => h(ExperienceItem, { item, key: item.id || idx }))
+            visibleItems.map((item, idx) => h(ExperienceItem, { item, key: (item.id ? `top-${item.id}` : `top-${idx}`) }))
+          ),
+          !loading && !error && hiddenCount > 0 && h('div', { className: 'xp-more no-print' },
+            h('button', {
+              className: 'btn',
+              'aria-expanded': showMore,
+              onClick: () => setShowMore(v => !v)
+            }, showMore ? 'Show less' : `Show more (${hiddenCount})`),
+            showMore && h('section', { className: 'xp-list xp-list--more', role: 'region', 'aria-label': 'More experience' },
+              hiddenItems.map((item, idx) => h(ExperienceItem, { item, key: (item.id ? `more-${item.id}` : `more-${idx}`) }))
+            )
           ),
           !loading && !error && h('section', { className: 'edu-list' },
             h('h2', null, 'Education'),
